@@ -3,8 +3,10 @@ import './App.css'
 import  { Home } from './pages/Home'
 import  { Sobre } from './pages/Sobre'
 import { SobreIgor } from './pages/SobreIgor'
+import { NotFound } from './pages/notFound'
 import { SobrePietro } from './pages/SobrePietro'
 import { Route, Routes  } from 'react-router-dom';
+
 
 function App() {
   
@@ -20,6 +22,8 @@ function App() {
            <Route path='/sobre' element={ <Sobre/>}/>
            <Route path='/sobre/igor' element={ <SobreIgor/>}/>
            <Route path='/sobre/pietro' element={ <SobrePietro/>} />
+           <Route path='*' element={ <NotFound/>} />
+          
         </Routes>
       </div>
        <hr />
