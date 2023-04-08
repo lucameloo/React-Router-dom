@@ -19,7 +19,11 @@ function App() {
       <div className="py-4">
         <Routes>
            <Route path='/' element={ <Home/>}/>
-           <Route path='/sobre' element={ <Sobre/>}/>
+           <Route path='/sobre' element={ <Sobre/>}>
+                  <Route path='' element={<NotFound/>}/>
+                  <Route path='app' element={<SobreIgor/>}/>
+           </Route>
+     
            <Route path='/sobre/igor' element={ <SobreIgor/>}/>
            <Route path='/sobre/pietro' element={ <SobrePietro/>} />
            <Route path='*' element={ <NotFound/>} />
